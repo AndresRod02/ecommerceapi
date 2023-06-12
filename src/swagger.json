@@ -2,7 +2,7 @@
   "openapi": "3.0.0",
   "info": {
     "title": "ecommerce_api",
-    "description": "Api funcional para un e-commerce, contiene: registro de usuarios, inicio de sesión y envío de token con JWT, crear productos, agregar productos al carrito, comprar lo que haya en el carito",
+    "description": "Api funcional para un e-commerce, contiene: registro de usuarios, inicio de sesión y crear productos, agregar productos al carrito, comprar lo que haya en el carito",
     "contact": {},
     "version": "1.0"
   },
@@ -101,19 +101,6 @@
         "tags": ["Orders"],
         "summary": "Obten las ordenes de un usuario por su id",
         "operationId": "Getordersbyusersid",
-        "parameters": [
-          {
-            "name": "access-token",
-            "in": "header",
-            "description": "",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "string",
-              "example": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJmaXJzdG5hbWUiOm51bGwsImxhc3RuYW1lIjpudWxsLCJpZCI6MSwidXNlcm5hbWUiOiJWaW5pY2lvIENoYXZhcnJpYSIsImVtYWlsIjoidmljaGF2YXJyaWEyMUBnbWFpbC5jb20iLCJpYXQiOjE2ODYzODE3MDEsImV4cCI6MTY4NjM5OTcwMX0.Ppv9PSnXM2oagRAd11VAf3o3eK7cOpXnSfBFmAAPHW1_vKLXyNHQOz6VLBQ7BwVPmNa7F1Gjl6d0vuPlgMgLcQ"
-            }
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -238,19 +225,7 @@
         "tags": ["Products"],
         "summary": "Crea un producto",
         "operationId": "CreateProduct",
-        "parameters": [
-          {
-            "name": "access-token",
-            "in": "header",
-            "description": "Crea un producto para vender en la tienda",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "string",
-              "example": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJmaXJzdG5hbWUiOm51bGwsImxhc3RuYW1lIjpudWxsLCJpZCI6MSwidXNlcm5hbWUiOiJWaW5pY2lvIENoYXZhcnJpYSIsImVtYWlsIjoidmljaGF2YXJyaWEyMUBnbWFpbC5jb20iLCJpYXQiOjE2ODYzODE3MDEsImV4cCI6MTY4NjM5OTcwMX0.Ppv9PSnXM2oagRAd11VAf3o3eK7cOpXnSfBFmAAPHW1_vKLXyNHQOz6VLBQ7BwVPmNa7F1Gjl6d0vuPlgMgLcQ"
-            }
-          }
-        ],
+        
         "requestBody": {
           "required": true,
           "content": {
@@ -303,19 +278,7 @@
         "tags": ["Products"],
         "summary": "Obtiene los producto donde su cantidad sea mayor que 0",
         "operationId": "Getproductsmayoresacero",
-        "parameters": [
-          {
-            "name": "access-token",
-            "in": "header",
-            "description": "",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "string",
-              "example": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJmaXJzdG5hbWUiOm51bGwsImxhc3RuYW1lIjpudWxsLCJpZCI6MSwidXNlcm5hbWUiOiJWaW5pY2lvIENoYXZhcnJpYSIsImVtYWlsIjoidmljaGF2YXJyaWEyMUBnbWFpbC5jb20iLCJpYXQiOjE2ODYzODE3MDEsImV4cCI6MTY4NjM5OTcwMX0.Ppv9PSnXM2oagRAd11VAf3o3eK7cOpXnSfBFmAAPHW1_vKLXyNHQOz6VLBQ7BwVPmNa7F1Gjl6d0vuPlgMgLcQ"
-            }
-          }
-        ],
+        
         "responses": {
           "200": {
             "description": "",
@@ -335,18 +298,7 @@
         "tags": ["Products"],
         "summary": "Edita la descripción de un producto",
         "operationId": "updateDescriptionProduct",
-        "parameters": [
-          {
-            "name": "access-token",
-            "in": "header",
-            "description": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJBbmRyZXMiLCJlbWFpbCI6ImFyZGF2aWR5cXVlQGdtYWlsLmNvbSIsImlhdCI6MTY4NjU0Njk3MiwiZXhwIjoxNjkwMTQ2OTcyfQ.dAtSykwKp29W_hS8zSuNK2dF3ck0fiNAUITY9nQG7EOPPJGW9Z8L12O-xQiT0SxPumsKzQ65hjO1jimZGdjWFA",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+        
         "requestBody": {
           "description": "Debes enviar id del producto y nueva descripción",
           "content": {
@@ -380,19 +332,7 @@
         "tags": ["ProductInCart"],
         "summary": "Agregar al carrito",
         "operationId": "addtocart",
-        "parameters": [
-          {
-            "name": "access-token",
-            "in": "header",
-            "description": "Utiliza este endpoint para llevar productos al carrito del usuario",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "string",
-              "example": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJmaXJzdG5hbWUiOm51bGwsImxhc3RuYW1lIjpudWxsLCJpZCI6MSwidXNlcm5hbWUiOiJWaW5pY2lvIENoYXZhcnJpYSIsImVtYWlsIjoidmljaGF2YXJyaWEyMUBnbWFpbC5jb20iLCJpYXQiOjE2ODYzODE3MDEsImV4cCI6MTY4NjM5OTcwMX0.Ppv9PSnXM2oagRAd11VAf3o3eK7cOpXnSfBFmAAPHW1_vKLXyNHQOz6VLBQ7BwVPmNa7F1Gjl6d0vuPlgMgLcQ"
-            }
-          }
-        ],
+        
         "requestBody": {
           "description": "",
           "content": {
@@ -427,19 +367,6 @@
         "tags": ["Orders"],
         "summary": "Crea una Orden",
         "operationId": "CreateOrder",
-        "parameters": [
-          {
-            "name": "access-token",
-            "in": "header",
-            "description": "",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "string",
-              "example": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJmaXJzdG5hbWUiOm51bGwsImxhc3RuYW1lIjpudWxsLCJpZCI6MSwidXNlcm5hbWUiOiJWaW5pY2lvIENoYXZhcnJpYSIsImVtYWlsIjoidmljaGF2YXJyaWEyMUBnbWFpbC5jb20iLCJpYXQiOjE2ODYzNzY1MzIsImV4cCI6MTY4NjM3NjgzMn0.7Mi6H9n8hRYe37mDvTlXC4copN7GpviyN710Nmfzz2aBKIxhgL3cMM7ESp8ReNIW2xRrRZJDR5g-YeogloiiVg"
-            }
-          }
-        ],
         "requestBody": {
           "description": "",
           "content": {
@@ -484,19 +411,6 @@
         "tags": ["Orders"],
         "summary": "Compra la orden",
         "operationId": "CompletedOrder",
-        "parameters": [
-          {
-            "name": "access-token",
-            "in": "header",
-            "description": "",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "string",
-              "example": "eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJmaXJzdG5hbWUiOm51bGwsImxhc3RuYW1lIjpudWxsLCJpZCI6MSwidXNlcm5hbWUiOiJWaW5pY2lvIENoYXZhcnJpYSIsImVtYWlsIjoidmljaGF2YXJyaWEyMUBnbWFpbC5jb20iLCJpYXQiOjE2ODYzNzY1MzIsImV4cCI6MTY4NjM3NjgzMn0.7Mi6H9n8hRYe37mDvTlXC4copN7GpviyN710Nmfzz2aBKIxhgL3cMM7ESp8ReNIW2xRrRZJDR5g-YeogloiiVg"
-            }
-          }
-        ],
         "requestBody": {
           "description": "",
           "content": {
