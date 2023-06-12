@@ -8,10 +8,10 @@ const createUser = async (req, res, next) => {
     const {username, email, password} = req.body;
     const hash = await UserServices.hashed(password)
     const user = await UserServices.createNewUser({username, email, password:hash});
-    res.status(201).send()
     await CartServices.createNewCart({userId: user.dataValues.id});
     const vt = await UserServices.verifyToken(username, email)
     sendWelcomeMail(email, { username, vt });
+    res.status(201).send()
   } catch (error) {
     next(error)
   }
