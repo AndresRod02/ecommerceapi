@@ -1,7 +1,7 @@
-const Users = require("../models/users.model");
-const ProductsInCart = require("../models/productInCart.model")
-const Products = require("../models/products.model");
-const Cart = require("../models/cart.model");
+const Users = require("../models/users.model.js");
+const ProductsInCart = require("../models/productInCart.model.js")
+const Products = require("../models/products.model.js");
+const Cart = require("../models/cart.model.js");
 const path = require("path");
 const fs = require("fs");
 const createUser = async (newUser) => {

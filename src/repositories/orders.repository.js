@@ -1,5 +1,5 @@
-const Orders = require('../models/orders.model');
-const Users = require('../models/users.model');
+const Orders = require('../models/orders.model.js');
+const Users = require('../models/users.model.js');
 
 const getOrderByUser = async (userId) => {
   const orderUser = await Orders.findAll({

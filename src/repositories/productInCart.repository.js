@@ -1,4 +1,4 @@
-const ProductInCart = require("../models/productInCart.model");
+const ProductInCart = require("../models/productInCart.model.js");
 const { Op } = require("sequelize");
 
 const createProductInCart = async (dataProductInCart) => {

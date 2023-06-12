@@ -1,7 +1,7 @@
-const Products = require("../models/products.model");
+const Products = require("../models/products.model.js");
 const path = require("path");
 const fs = require("fs");
-const Users = require("../models/users.model");
+const Users = require("../models/users.model.js");
 const { where } = require("sequelize");
 const { Op } = require("sequelize");
 
