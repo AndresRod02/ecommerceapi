@@ -19,14 +19,10 @@ class UserServices {
   }
 
   static async verifyToken(username, email) {
-    const verifyToken = jwt.sign(
-      { username, email },
-      process.env.JWT_SECRET_EMAIL_VALIDATION,
-      {
-        algorithm: "HS512",
-        expiresIn: "1000h",
-      }
-    );
+    const verifyToken = jwt.sign({ username, email }, "emailValidation", {
+      algorithm: "HS512",
+      expiresIn: "1000h",
+    });
     return verifyToken;
   }
 
@@ -71,7 +67,7 @@ class UserServices {
   }
 
   static async token(userData) {
-    const token = jwt.sign(userData, process.env.JWT_SECRET_LOGIN, {
+    const token = jwt.sign(userData, "parangaricutirimucuaro", {
       algorithm: "HS512",
       expiresIn: "1000h",
     });
@@ -88,7 +84,7 @@ class UserServices {
   }
 
   static async decoded(token, next) {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET_EMAIL_VALIDATION, {
+    const decoded = jwt.verify(token, "emailValidation", {
       algorithms: "HS512",
     });
     if (!decoded) {
