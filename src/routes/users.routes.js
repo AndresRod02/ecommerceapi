@@ -13,7 +13,6 @@ const {
   updateUserValidator,
   validateEmailValidator,
 } = require("../validators/user.validators");
-const authenticate = require("../middlewares/auth.middleware")
 const uploadAvatar = require("../middlewares/multer.middleware");
 
 
@@ -27,7 +26,6 @@ router.post("/users/email-validate",validateEmailValidator, validateEmail);
 
 router.put(
   "/users/:id",
-  authenticate,
   uploadAvatar,
   updateUserValidator,
   updateUser
