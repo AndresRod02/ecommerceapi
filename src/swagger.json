@@ -8,7 +8,7 @@
   },
   "servers": [
     {
-      "url": "https://db-ecommerce.onrender.com",
+      "url": "https://ecommerceapii-btpg.onrender.com/",
       "variables": {}
     }
   ],
