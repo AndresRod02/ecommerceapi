@@ -3,7 +3,7 @@ const Cart = require("./cart.model")
 const Products = require("./products.model")
 const ProductInCart = require("./productInCart.model")
 const Orders = require("./orders.model")
-const ProductInOrder = require("./ProductInOrder.model")
+const ProductInOrder = require("./productInOrder.model")
 
 const initModels = () => {
 
