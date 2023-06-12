@@ -1,5 +1,5 @@
 const { Op } = require("sequelize");
-const ProductInOrder = require("../models/ProductInOrder.model.js");
+const ProductInOrder = require("../models/productInOrder.model.js");
 const Products = require("../models/products.model.js");
 
 const createProductInOrder = async (productInOrder) => {
